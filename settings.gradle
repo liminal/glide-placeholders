@@ -1,0 +1,4 @@
+rootProject.name = 'glide-placeholders'
+
+include ':glide-placeholders-lib'
+include ':example-app'
