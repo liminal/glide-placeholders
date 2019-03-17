@@ -1,1 +1,10 @@
-<manifest package="com.github.liminal.glide.placeholders" />
+<manifest package="com.github.liminal.glide.placeholders"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <meta-data
+            android:name="com.github.liminal.glide.placeholders.PlaceholderGlideModule"
+            android:value="GlideModule"/>
+    </application>
+
+</manifest>
