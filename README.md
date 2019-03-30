@@ -1,4 +1,5 @@
 # Glide Placeholders library
+[![Release](https://jitpack.io/v/liminal/glide-placeholders.svg)](https://jitpack.io/#liminal/glide-placeholders)
 
 This library implements a simple way of using placeholder generator sites with the Glide image loading library.
 
