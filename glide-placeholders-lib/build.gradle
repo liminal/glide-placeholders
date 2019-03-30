@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.liminal'
-version = '0.8.1'
+version = '0.8.2'
 archivesBaseName = 'glide-placeholders'
 
 android {
