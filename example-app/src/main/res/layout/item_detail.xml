@@ -1,79 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:flexWrap="wrap"
+    app:alignItems="flex_start"
+    app:justifyContent="space_around"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
 
     android:orientation="vertical"
     tools:ignore="HardcodedText">
 
-    <androidx.cardview.widget.CardView
-        app:cardElevation="10dp"
+    <com.example.glideplaceholders.app.SampleImageCard
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:imgHeight="100dp"
+        app:imgWidth="100dp"
+        app:sampleCaption="Square 100dp"
+        />
 
-        <ImageView
-            android:id="@+id/image_1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#ff8888" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="200dp x 200dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        app:cardElevation="10dp"
+    <com.example.glideplaceholders.app.SampleImageCard
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:imgHeight="75dp"
+        app:imgWidth="125dp"
+        app:sampleCaption="Landscape 125dp x 75dp"
+        />
 
-        <ImageView
-            android:id="@+id/image_2"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#ff8888" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="300dp x 150dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        app:cardElevation="10dp"
+    <com.example.glideplaceholders.app.SampleImageCard
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/image_3"
-            android:layout_width="150dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#ff8888" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="150dp x 300dp" />
-
-    </androidx.cardview.widget.CardView>
+        android:layout_height="wrap_content"
+        app:sampleCaption="Portrait 75dp x 125dp"
+        app:imgHeight="125dp"
+        app:imgWidth="75dp" />
 
 
-</LinearLayout>
+    <com.example.glideplaceholders.app.SampleImageCard
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:sampleCaption="Icon 48dp"
+        app:imgHeight="48dp"
+        app:imgWidth="48dp" />
+
+    <com.example.glideplaceholders.app.SampleImageCard
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:sampleCaption="Icon 24dp"
+        app:imgHeight="24dp"
+        app:imgWidth="24dp" />
+
+
+</com.google.android.flexbox.FlexboxLayout>

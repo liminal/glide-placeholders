@@ -48,12 +48,17 @@ class ItemDetailFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.item_detail, container, false)
 
-        // Show the dummy content as text in a TextView.
         item?.let {
-            rootView.image_1.loadImage(it.item)
-            rootView.image_2.loadImage(it.item)
-            rootView.image_3.loadImage(it.item)
-        }
+            (rootView as? ViewGroup)?.let { group ->
+                (0 until group.childCount).map(group::getChildAt)
+                    .filter { v -> v is SampleImageCard }
+                    .forEach { v ->  (v as SampleImageCard).image.loadImage(it.item)
+
+                }
+
+                }
+
+            }
 
         return rootView
     }

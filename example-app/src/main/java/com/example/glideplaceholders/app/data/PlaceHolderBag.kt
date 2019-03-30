@@ -1,6 +1,9 @@
 package com.example.glideplaceholders.app.data
 
+import com.example.glideplaceholders.app.dpToPx
 import com.github.liminal.glide.placeholders.ImagePlaceHolderModel
+import com.github.liminal.glide.placeholders.fixedSize
+import com.github.liminal.glide.placeholders.maxSize
 import com.github.liminal.glide.placeholders.sites.BaconMockup
 import com.github.liminal.glide.placeholders.sites.BaseKitten
 import com.github.liminal.glide.placeholders.sites.DummyImage
@@ -24,6 +27,16 @@ object PlaceHolderBag {
      */
     val ITEMS: List<Group<ImagePlaceHolderModel>> =
         listOf(
+            group("wrappers") {
+                name = "Wrappers"
+
+                entry("1") {
+                    description = "imgplaceholder"
+                    item = PlaceKitten(
+
+                    ).maxSize(maxWidth = 250.dpToPx)
+                }
+            },
             kittenGroup("placekitten", "placekitten.com", ::PlaceKitten),
             kittenGroup("placebear", "placebear.com", ::PlaceBear),
             kittenGroup("steven_seagallery", "stevenseagallery.com", ::StevenSeagallery),
@@ -45,6 +58,14 @@ object PlaceHolderBag {
                 entry("1") {
                     description = "Bacon Mockup"
                     item = BaconMockup
+                }
+           },
+            group("fixed size_baconmock") {
+                name = "Bacon Mockup Fixed Size"
+
+                entry("1") {
+                    description = "Bacon Mockup Fixed"
+                    item = BaconMockup.fixedSize(width = 300, height = 300)
                 }
            },
             group("imgplaceholder") {
